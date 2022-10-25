@@ -1,0 +1,15 @@
+@media (max-width:375px) {
+    .table{
+        font-size: xx-small;
+        max-width: 375px;
+    }
+    .btn{
+       font-size: x-small;
+       height: 25px;
+       text-align: center;
+    }
+    .modal{
+        max-width: 375px;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,28 @@
+.table{
+  margin-top: 30px;
+ 
+  text-align: center;
+ 
+  
+}
+
+thead{
+  background: cadetblue;
+  color: white;
+  text-align: center;
+  
+}
+
+tbody{
+  text-align: center;
+ 
+}
+
+@media (max-width:375px) {
+  .table{
+    width: 375px;
+  }
+  
+}
+
+
