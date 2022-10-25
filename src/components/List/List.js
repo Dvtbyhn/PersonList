@@ -86,11 +86,12 @@ export default function List() {
                             {
                                 currentPosts.filter(item => {
                                     return item.fullName.toLowerCase().indexOf(input.toLowerCase()) !== -1
-                                }).map((person, i) => {
+                                }).map((person) => {
                                     return (
                                         <>
-                                            <tr key={i}>
-                                                <Person
+                                            <tr key={person.id}>
+                                                <Person 
+                                                
                                                     person={person}
                                                     deleteAlert={deleteAlert}
                                                 />

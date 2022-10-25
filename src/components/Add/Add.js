@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { PersonContext } from '../context/Context';
-import "./Add.css"
+
 
 export default function Add({ addAlert }) {
 
