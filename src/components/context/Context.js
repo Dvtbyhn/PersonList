@@ -7,16 +7,11 @@ const PersonContextProvider = (props) => {
 
     const [person, setPerson] = useState([
         { id: 1, fullName: "Davut Beyhan", tel: 5524242422, address: "Istanbul/Turkey", mail: "beyhandavut@gmail.com" },
-        { id: 2, fullName: "James Bill", tel: 3456789344, address: "London/England", mail: "beyhandavut@gmail.com" },
-        { id: 3, fullName: "Alex White", tel: 443566434, address: "Chicago/USA", mail: "beyhandavut@gmail.com" },
-        { id: 4, fullName: "Jolly Maec", tel: 5466452231, address: "Roma/Italy", mail: "beyhandavut@gmail.com" },
-        { id: 5, fullName: "Zeynep Taşçı", tel: 5524242422, address: "Istanbul/Turkey", mail: "beyhandavut@gmail.com" },
-        { id: 6, fullName: "Alice Wonderful", tel: 3456789344, address: "London/England", mail: "beyhandavut@gmail.com" },
-        { id: 7, fullName: "Sahin Kırk", tel: 443566434, address: "Chicago/USA", mail: "beyhandavut@gmail.com" },
-        { id: 8, fullName: "Magic West", tel: 5466452231, address: "Roma/Italy", mail: "beyhandavut@gmail.com" },
-        { id: 9, fullName: "David Beck", tel: 5524242422, address: "Istanbul/Turkey", mail: "beyhandavut@gmail.com" },
-        { id: 10, fullName: "Maria Blew", tel: 3456789344, address: "London/England", mail: "beyhandavut@gmail.com" },
-
+        { id: 2, fullName: "James Bill", tel: 3456789344, address: "London/England", mail: "james223@gmail.com" },
+        { id: 3, fullName: "Alex White", tel: 443566434, address: "Chicago/USA", mail: "alexwhite@gmail.com" },
+        { id: 4, fullName: "Jolly Maec", tel: 5466452231, address: "Roma/Italy", mail: "jolly@gmail.com" },
+        { id: 5, fullName: "Zeynep Taşçı", tel: 5524242422, address: "Istanbul/Turkey", mail: "zeyneptas@gmail.com" },
+        { id: 6, fullName: "Alice Wonderful", tel: 3456789344, address: "London/England", mail: "@gmail.com" },
     ])
 
 
