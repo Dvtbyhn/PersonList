@@ -16,9 +16,8 @@ const PersonContextProvider = (props) => {
 
 
     useEffect(() => {
-
-        sortName()
         localStorage.setItem("person", JSON.stringify(person))
+        sortName()
     })
 
     useEffect(() => {
@@ -27,7 +26,7 @@ const PersonContextProvider = (props) => {
     }, [])
 
     const sortName = () => {
-         const listSort =  person.sort((a, b) => a.fullName < b.fullName ? -1 : 0)
+        const listSort = person.sort((a, b) => a.fullName < b.fullName ? -1 : 0)
         setPerson(listSort)
     }
 
@@ -49,7 +48,7 @@ const PersonContextProvider = (props) => {
 
 
     return (
-        <PersonContext.Provider value={{ person, delPerson, addPerson, editPerson, setPerson, sortName }}>
+        <PersonContext.Provider value={{ person, delPerson, addPerson, editPerson, setPerson }}>
             {props.children}
         </PersonContext.Provider>
 
