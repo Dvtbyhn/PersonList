@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { PersonContext } from '../context/Context';
+import { PersonContext } from '../../context/Context';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 

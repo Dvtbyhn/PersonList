@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { PersonContext } from '../context/Context'
+import { PersonContext } from '../../context/Context'
 import Edit from "../Edit/Edit"
 import { ModalTitle } from "react-bootstrap"
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import "./Person.css"
-export default function Person({ person ,deleteAlert}) {
+export default function Person({ person ,deleteAlert,setPerson}) {
 
 
     const [show, setShow] = useState(false)
@@ -14,11 +14,11 @@ export default function Person({ person ,deleteAlert}) {
 
     const handleClose = () => setShow(false)
    
+  
 
 
     useEffect(() => {
         handleClose()
-        
     }, [person])
 
 

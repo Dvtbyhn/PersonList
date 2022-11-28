@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Pagination({ postsPerPage, totalPosts, paginate, person }) {
+export default function Pages({ postsPerPage, totalPosts, paginate, person }) {
 
     const pageNumbers = []
 

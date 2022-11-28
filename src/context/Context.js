@@ -12,23 +12,16 @@ const PersonContextProvider = (props) => {
         { id: 4, fullName: "Jolly Maec", tel: 5466452231, address: "Roma/Italy", mail: "jolly@gmail.com" },
         { id: 5, fullName: "Zeynep Taşçı", tel: 5524242422, address: "Istanbul/Turkey", mail: "zeyneptas@gmail.com" },
         { id: 6, fullName: "Alice Wonderful", tel: 3456789344, address: "London/England", mail: "@gmail.com" },
-    ])
-
-
+    ]) 
+    
     useEffect(() => {
         localStorage.setItem("person", JSON.stringify(person))
-        sortName()
     })
 
     useEffect(() => {
-        const data = localStorage.getItem("person")
-        setPerson(JSON.parse(data))
+        const data = JSON.parse(localStorage.getItem("person"))
+         setPerson(data)
     }, [])
-
-    const sortName = () => {
-        const listSort = person.sort((a, b) => a.fullName < b.fullName ? -1 : 0)
-        setPerson(listSort)
-    }
 
     const delPerson = (id) => {
         const del = person.filter(item => item.id !== id)
@@ -42,10 +35,6 @@ const PersonContextProvider = (props) => {
     const editPerson = (id, updatedPerson) => {
         setPerson(person.map((item) => (item.id === id ? updatedPerson : item)))
     }
-
-
-
-
 
     return (
         <PersonContext.Provider value={{ person, delPerson, addPerson, editPerson, setPerson }}>

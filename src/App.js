@@ -1,5 +1,5 @@
 
-import PersonContextProvider from './components/context/Context';
+import PersonContextProvider from './context/Context';
 import './App.css';
 import List from './components/List/List';
 

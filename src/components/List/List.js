@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Add from '../Add/Add';
-import { PersonContext } from '../context/Context';
+import { PersonContext } from '../../context/Context';
 import Modal from 'react-bootstrap/Modal';
 import Person from '../Person/Person';
-
 import Alert from 'react-bootstrap/Alert';
-import Pagination from '../Pagination';
 import "./List.css"
 import Header from '../Header/Header';
+import Pages from '../Pages';
 
 export default function List() {
 
@@ -24,9 +23,9 @@ export default function List() {
 
     const { person } = useContext(PersonContext)
 
+    
     useEffect(() => {
         handleClose()
-
     }, [person])
 
     const addAlert = () => {
@@ -90,8 +89,7 @@ export default function List() {
                                     return (
                                         <>
                                             <tr key={person.id}>
-                                                <Person 
-                                                
+                                              <Person                                                 
                                                     person={person}
                                                     deleteAlert={deleteAlert}
                                                 />
@@ -101,17 +99,11 @@ export default function List() {
                                 })
                             }
                         </tbody>
-                    </table>
-                 
-
-                    <Pagination
-
-                        person={person}
+                    </table>    
+               <Pages     person={person}
                         postsPerPage={postsPerPage}
                         totalPosts={person.length}
-                        paginate={paginate}
-
-                    />
+                        paginate={paginate}/>
 
                     <Modal show={show} onHide={handleClose} className="modal" >
                         <Modal.Header closeButton>
