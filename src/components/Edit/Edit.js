@@ -7,18 +7,14 @@ import Form from 'react-bootstrap/Form';
 export default function Edit({ personel }) {
 
   const { editPerson } = useContext(PersonContext)
-
-
   const person = personel
   const id = person.id
-
 
   const [fullName, setFullName] = useState(person.fullName)
   const [tel, setTel] = useState(person.tel)
   const [mail, setMail] = useState(person.mail)
   const [address, setAddress] = useState(person.address)
-
-
+  
   const updatedPerson = {id,fullName,tel,mail,address }
 
   const handleSubmit = (e) => {

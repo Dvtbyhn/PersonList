@@ -1,8 +1,8 @@
 import React from 'react'
 import { Form } from 'react-bootstrap';
+
+
 export default function Header({ setInput, input }) {
-
-
     return (
         <div style={{ display: "flex", justifyContent: "center" }}>
             <Form>

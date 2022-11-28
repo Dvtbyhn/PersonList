@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const PersonContext = createContext();
 
@@ -13,23 +13,13 @@ const PersonContextProvider = (props) => {
         { id: 5, fullName: "Zeynep Taşçı", tel: 5524242422, address: "Istanbul/Turkey", mail: "zeyneptas@gmail.com" },
         { id: 6, fullName: "Alice Wonderful", tel: 3456789344, address: "London/England", mail: "@gmail.com" },
     ]) 
-    
-    useEffect(() => {
-        localStorage.setItem("person", JSON.stringify(person))
-    })
-
-    useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("person"))
-         setPerson(data)
-    }, [])
-
     const delPerson = (id) => {
         const del = person.filter(item => item.id !== id)
         setPerson(del)
     }
 
     const addPerson = (fullName, tel, address, mail) => {
-        setPerson([...person, { id: Math.random(), fullName, tel, address, mail }])
+        setPerson([...person,{id: Math.random(), fullName, tel, address, mail}])
     }
 
     const editPerson = (id, updatedPerson) => {

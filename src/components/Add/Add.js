@@ -25,9 +25,7 @@ export default function Add({ addAlert }) {
 
   return (
     <>
-
       <Form onSubmit={handleSubmit} className="form">
-
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
           <Form.Control
